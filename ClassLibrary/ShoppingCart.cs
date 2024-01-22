@@ -27,7 +27,7 @@ namespace ClassLibrary
             double summa = 0;
             foreach (var product in products)
             {
-                summa += product.Price * product.Count;
+                summa += product.Price;
             }
             return summa;
         }

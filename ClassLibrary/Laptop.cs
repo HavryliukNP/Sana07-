@@ -20,7 +20,6 @@ namespace ClassLibrary
         public override string Display()
         {
             return ($"{Name} {Price} {Count} {Processor} {Memory}");
-            throw new NotImplementedException();
         }
     }
 }

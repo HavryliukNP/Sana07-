@@ -18,7 +18,6 @@ namespace ClassLibrary
         public override string Display()
         {
             return ($"{Name} {Price} {Count} {NumberParts}");
-            throw new NotImplementedException();
         }
     }
 }
