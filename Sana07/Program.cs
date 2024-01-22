@@ -10,13 +10,13 @@ try
         cart.AddProduct(smartphone);
 
         Lego lego = new Lego(217, "LEGO Technic Monster Jam Dragon", 20, 5);
-        cart.AddProduct (lego);
+        cart.AddProduct(lego);
 
-        cart.PrintCart();
+        Console.WriteLine(cart.GetCartDetails());
 
         Console.WriteLine($"Загальна сума: {cart.CalculateTotalPrice()}");
     }
 catch (ArgumentException ex)
     {
-    Console.WriteLine($"Помилка: {ex.Message}");
+        Console.WriteLine($"Помилка: {ex.Message}");
     }

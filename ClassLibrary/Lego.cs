@@ -8,8 +8,17 @@ namespace ClassLibrary
 {
     public class Lego : Product
     {
-        public int NumberParts { get; set; }
-
+        protected int numberParts;
+        public int NumberParts
+        {
+            get { return numberParts; }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Кількість деталей не може бути від'ємною.");
+                numberParts = value;
+            }
+        }
         public Lego(int numberParts, string name, double price, int count)
             : base(name, price, count)
         {

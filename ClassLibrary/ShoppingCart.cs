@@ -14,13 +14,16 @@ namespace ClassLibrary
         {
             products.Add(product);
         }
-
-        public void PrintCart()
+        public string GetCartDetails()
         {
-            foreach (var product in products) 
+            StringBuilder cartDetails = new StringBuilder();
+
+            foreach (var product in products)
             {
-                product.Display();
+                cartDetails.AppendLine(product.Display());
             }
+
+            return cartDetails.ToString();
         }
         public double CalculateTotalPrice()
         {
